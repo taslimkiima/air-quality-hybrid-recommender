@@ -666,11 +666,11 @@ elif page == "Rekomendasi Proaktif":
     st.subheader("🏛️ Rekomendasi Kebijakan Pejabat")
     rekom_pejabat = results_prediksi.get("Rekomendasi Kebijakan (Pejabat)")
     if "TINDAKAN DARURAT" in str(rekom_pejabat):
-        render_action_box(f"*DARURAT:* {rekom_pejabat}", level="bad")
+        render_action_box(f"DARURAT: {rekom_pejabat}", level="bad")
     elif "PERKETAT UJI EMISI" in str(rekom_pejabat):
-        render_action_box(f"*MITIGASI:* {rekom_pejabat}", level="warn")
+        render_action_box(f"MITIGASI: {rekom_pejabat}", level="warn")
     else:
-        render_action_box(f"*RUTIN:* {rekom_pejabat}", level="ok")
+        render_action_box(f"RUTIN: {rekom_pejabat}", level="ok")
 
     st.markdown("### ⬇️ Unduh Laporan Rekomendasi")
     d1, d2 = st.columns(2)
